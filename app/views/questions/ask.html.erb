@@ -1,4 +1,12 @@
-<form action="/answer" data-turbo="false">
-  <input type="text" name="ask">
-  <input type="submit" value="Ask!">
-</form>
+<%# Set up the container and heading %>
+<div class = "container">
+<h1>Stupid Coaching</h1>
+
+<h3>Ask your coach anything!</h3>
+
+  <form action="/answer" data-turbo="false">
+    <%# Once input type and name are entered, don't forget the class "form control" %>
+    <input type="text" name="question" class="form-control">
+    <input type="submit" value="Ask" class="btn btn-primary mt-3">
+  </form>
+</div>

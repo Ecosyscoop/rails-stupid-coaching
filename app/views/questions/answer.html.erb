@@ -1,1 +1,30 @@
+<div class="container">
+<h1>Stupid Coaching Answers</h1>
+  <div class="row">
+    <div class="col-12">
+        <div class="card border border-1 p-3 m-2">
+          <blockquote class="student">
+          <% if @question.blank? %>
+            😶
+          <% else %>
+          <p><%= @question %></p>
+          <% end %>
+          <cite>- You</cite>
+          </blockquote>
+        </div>
 
+
+        <%# Use "blockquote" instead of "div" so that the answer is displayed in a quote box format %>
+        <%# cite will format the text in italic %>
+        <div class="card border border-1 p-3 m-2">
+          <blockquote class="coach">
+            <p><%= @answer %></p>
+            <cite>- Your coach</cite>
+          </blockquote>
+        </div>
+
+        <%# Add the path after the defined link_to so that the link will go to the intended page %>
+        <%= link_to "Ask a new question", ask_path %>
+      </div>
+    </div>
+</div>
